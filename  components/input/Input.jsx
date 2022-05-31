@@ -6,8 +6,9 @@ import { handleTabCompletion } from "../../utils/tabCompletion";
 import { Bash } from "../bash";
 import styles from "./input.module.scss";
 import { Flex } from "@chakra-ui/react";
+import {useEffect, useState} from 'react';
 
-export const Input = ({
+const Input = ({
   inputRef,
   containerRef,
   command,
@@ -18,6 +19,7 @@ export const Input = ({
   setLastCommandIndex,
   clearHistory,
 }) => {
+  const [query, setQuery] = useState(false)
   const { trackEvent } = useMatomo();
   const onSubmit = async (event) => {
     const commands = history
@@ -40,10 +42,17 @@ export const Input = ({
       event.preventDefault();
 
       setLastCommandIndex(0);
+      setQuery(true)
+      console.log(query)
 
       await shell(history, command, setHistory, clearHistory, setCommand);
 
       trackEvent({ category: "Command Executed", action: command });
+     
+        if (query) {
+          inputRef.current.scrollTo();
+        }
+    
 
       containerRef.current.scrollTo(0, containerRef.current.scrollHeight);
     }

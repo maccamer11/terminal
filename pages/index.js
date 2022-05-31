@@ -2,6 +2,7 @@ import { useMatomo } from "@datapunt/matomo-tracker-react";
 import { NextPageContext } from "next";
 import Head from "next/head";
 import React from "react";
+import { useRef, useEffect } from 'react';
 import packageJson from "../package.json";
 import { History } from "../ components/history";
 import { Input } from "../ components/input";
@@ -14,7 +15,7 @@ import Banner from "../ components/banner/Banner";
 const IndexPage = ({ version, quote, inputRef }) => {
   const { trackPageView } = useMatomo();
 
-  const containerRef = React.useRef(null);
+  const containerRef = useRef(null);
   const {
     history,
     command,
@@ -27,7 +28,7 @@ const IndexPage = ({ version, quote, inputRef }) => {
 
   /* const init = React.useCallback(() => setHistory(banner()), []); */
 
-  React.useEffect(() => {
+  useEffect(() => {
     trackPageView({});
   }, []);
 
@@ -35,7 +36,9 @@ const IndexPage = ({ version, quote, inputRef }) => {
     init();
   }, [init]); */
 
-  React.useEffect(() => {
+
+
+  useEffect(() => {
     if (inputRef.current) {
       inputRef.current.focus();
     }
@@ -62,6 +65,7 @@ const IndexPage = ({ version, quote, inputRef }) => {
               setHistory={setHistory}
               setLastCommandIndex={setLastCommandIndex}
               clearHistory={clearHistory}
+              
             />
           </div>
         </div>
