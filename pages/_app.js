@@ -3,14 +3,15 @@ import "../styles/globals.css";
 import Head from "next/head";
 import { MatomoProvider, createInstance } from "@datapunt/matomo-tracker-react";
 import { ChakraProvider } from "@chakra-ui/react";
-import styles from "../styles/Home.module.scss";
+import {useEffect, useRef} from 'react';
+import useKeypress from "../hooks/scroll";
 
 const App = ({ Component, pageProps }) => {
   const inputRef = React.useRef(null);
   const instance = createInstance({
-    urlBase: "https://a.m4tt72.xyz",
-    trackerUrl: "https://a.m4tt72.xyz/js/",
-    srcUrl: "https://a.m4tt72.xyz/js/",
+    urlBase: "https://mackenziecameron.com",
+    trackerUrl: "https://mackenziecameron.com",
+    srcUrl: "https://mackenziecameron.com",
     siteId: 1,
     configurations: {
       setRequestMethod: "GET",
@@ -21,6 +22,18 @@ const App = ({ Component, pageProps }) => {
     inputRef.current.focus();
   };
 
+  useEffect(() => {
+    if (inputRef.current) {
+      inputRef.current.focus();
+    }
+  }, []);
+
+
+
+
+
+ 
+
   return (
     <>
       <Head>
@@ -29,6 +42,7 @@ const App = ({ Component, pageProps }) => {
           content="initial-scale=1.0, width=device-width"
           key="viewport"
         />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&display=swap" />
       </Head>
       <ChakraProvider>
         <MatomoProvider value={instance}>
@@ -37,6 +51,7 @@ const App = ({ Component, pageProps }) => {
             <Component {...pageProps} inputRef={inputRef} />
             {/* </main> */}
           </div>
+         
         </MatomoProvider>
       </ChakraProvider>
     </>

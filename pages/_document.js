@@ -89,7 +89,7 @@ class MyDocument extends Document {
             href="/favicon-16x16.png"
           />
           <link rel="manifest" href="/manifest.json" />
-          <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&display=swap"/>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&display=swap"/>
           <meta name="msapplication-TileColor" content="#262626" />
           <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
           <meta name="theme-color" content="#D79921" />

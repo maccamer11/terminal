@@ -19,7 +19,6 @@ const Input = ({
   setLastCommandIndex,
   clearHistory,
 }) => {
-  const [query, setQuery] = useState(false)
   const { trackEvent } = useMatomo();
   const onSubmit = async (event) => {
     const commands = history
@@ -42,19 +41,18 @@ const Input = ({
       event.preventDefault();
 
       setLastCommandIndex(0);
-      setQuery(true)
-      console.log(query)
+      /* inputRef.current.scrollIntoView({ behavior: 'smooth' }) */
+     
+      
+      
+      console.log(lastCommandIndex)
 
       await shell(history, command, setHistory, clearHistory, setCommand);
 
       trackEvent({ category: "Command Executed", action: command });
-     
-        if (query) {
-          inputRef.current.scrollTo();
-        }
     
-
-      containerRef.current.scrollTo(0, containerRef.current.scrollHeight);
+      
+      /* containerRef.current.scrollTo(0, containerRef.current.scrollHeight); */
     }
 
     if (event.key === "ArrowUp") {

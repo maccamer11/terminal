@@ -12,7 +12,7 @@ import styles from "../styles/Home.module.scss";
 import { Box } from "@chakra-ui/react";
 import Banner from "../ components/banner/Banner";
 
-const IndexPage = ({ version, quote, inputRef }) => {
+const IndexPage = ({  inputRef }) => {
   const { trackPageView } = useMatomo();
 
   const containerRef = useRef(null);
@@ -44,10 +44,14 @@ const IndexPage = ({ version, quote, inputRef }) => {
     }
   }, [history]);
 
+  
+
+
   return (
     <>
       <Head>
         <title>Maccamer | Terminal</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&display=swap" />
       </Head>
       <Box py="14" px="10" overflowY='scroll' className={styles.background}>
         <div className={styles.banner}>
