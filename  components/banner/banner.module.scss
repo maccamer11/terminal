@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&display=swap");
+
+// Font Variables
+$rajdhani: "Rajdhani", serif;
+
+.banner {
+
+
+    width: 55vw;
+    min-width: 300px;
+
+    .bannerText {
+        color: #e05281;
+        font-family: $rajdhani;
+        font-weight: bold;
+        font-size: 18px;
+        padding-top: 20px;
+        padding-bottom: 45px;
+     
+    }
+}

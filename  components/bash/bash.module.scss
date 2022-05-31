@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&display=swap");
+
+// Font Variables
+$rajdhani: "Rajdhani", serif;
+
+.bash {
+  font-weight: 700;
+  font-family: $rajdhani;
+  font-size: 18px;
+  overflow: scroll;
+
+  .guest {
+    color: #68f056;
+  }
+
+  .user {
+    color: #8af47c;
+  }
+
+  .at {
+    color: pink;
+  }
+}
+
+/* "background": "black",
+"foreground": "#E05281",
+"yellow": "#68F056",
+"green": "#8AF47C",
+"gray": "pink",
+"blue": "red",
+"red": "pink" */

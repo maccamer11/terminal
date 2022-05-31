@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&display=swap");
+
+// Font Variables
+$rajdhani: "Rajdhani", serif;
+
+.flexGrow {
+  background-color: black;
+  font-family: $rajdhani;
+  font-size: 17px;
+  font-weight: bold;
+ 
+}
+
+.test {
+  font-family: $rajdhani;
+  font-size: 17px;
+  font-weight: bold;
+  white-space: pre;
+  
+}

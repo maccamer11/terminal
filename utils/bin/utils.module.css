@@ -1,0 +1,231 @@
+.age, .eyes, .bio1 {
+    
+    width: 60px;
+/*     animation: typing 0.5s steps(20), blink .5s step-end infinite alternate; */
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 1px solid;
+    font-weight: 600;
+   
+}
+
+.bio2, .bio3, .bio4{
+  width: 60px;
+  /*     animation: typing 0.5s steps(20), blink .5s step-end infinite alternate; */
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 1px solid;
+      font-weight: bold;
+}
+
+.bioQuote{
+  width: 60px;
+  /*     animation: typing 0.5s steps(20), blink .5s step-end infinite alternate; */
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 1px solid;
+      font-weight: bold;
+      
+     
+}
+  
+
+
+.ageAns, .eyeAns, .bioAns1{
+  font-weight: bold;
+}
+
+
+.age {
+  border-right: 2px solid rgba(17, 17, 17, 0.9);
+
+  animation: animated-text__1 70ms steps(30, end) 1 normal both,
+    animated-cursor__1 750ms steps(30, end) 2;
+}
+
+.eyes {
+  border-right: 2px solid rgba(17, 17, 17, 0.9);
+
+ 
+  animation: animated-text__2 350ms steps(30, end) 1s 1 normal both,
+    animated-cursor__2 750ms steps(30, end) 2;
+  -webkit-animation-delay: 1.4s;
+  animation-delay: 1.4s;
+}
+
+.bio1 {
+  border-right: 2px solid rgba(17, 17, 17, 0.9);
+
+ 
+  animation: animated-text__3 1.6s steps(80, end) 1s 1 normal both,
+    animated-cursor__3 750ms steps(30, end) ;
+  -webkit-animation-delay: 2.8s;
+  animation-delay: 2.8s;
+}
+
+.bio2 {
+  border-right: 2px solid rgba(17, 17, 17, 0.9);
+
+  
+  animation: animated-text__4 1.6s steps(80, end) 1s 1 normal both,
+    animated-cursor__4 750ms steps(30, end) ;
+  -webkit-animation-delay: 4.4s;
+  animation-delay: 4.4s;
+}
+
+.bio3 {
+  border-right: 2px solid rgba(17, 17, 17, 0.9);
+
+ 
+  animation: animated-text__5 1.6s steps(80, end) 1s 1 normal both,
+    animated-cursor__5 750ms steps(30, end) ;
+  -webkit-animation-delay: 6.2s;
+  animation-delay: 6.2s;
+}
+
+.bio4 {
+  border-right: 2px solid rgba(17, 17, 17, 0.9);
+
+  animation: animated-text__6 1.2s steps(80, end) 1s 1 normal both,
+    animated-cursor__6 750ms steps(30, end) ;
+  -webkit-animation-delay: 7.9s;
+  animation-delay: 7.9s;
+}
+.bioQuote {
+  border-right: 2px solid rgba(17, 17, 17, 0.9);
+
+
+  animation: animated-text__7 800ms steps(80, end) 1s 1 normal both,
+    animated-cursor__7 750ms steps(30, end) infinite;
+  -webkit-animation-delay: 10.3s;
+  animation-delay: 10.3s;
+}
+
+@keyframes animated-cursor__1 {
+  from {
+    border-right-color: #e05281
+  }
+  to {
+    border-right-color: transparent
+  }
+}
+
+@keyframes animated-cursor__2 {
+  from {
+    border-right-color: #e05281
+  }
+  to {
+    border-right-color: transparent
+  }
+}
+
+@keyframes animated-cursor__3 {
+  from {
+    border-right-color: #e05281
+  }
+  to {
+    border-right-color: transparent
+  }
+}
+
+@keyframes animated-cursor__4 {
+  from {
+    border-right-color: #e05281
+  }
+  to {
+    border-right-color: transparent
+  }
+}
+
+@keyframes animated-cursor__5 {
+  from {
+    border-right-color: #e05281
+  }
+  to {
+    border-right-color: transparent
+  }
+}
+
+@keyframes animated-cursor__6 {
+  from {
+    border-right-color: #e05281
+  }
+  to {
+    border-right-color: transparent
+  }
+}
+
+@keyframes animated-cursor__7 {
+  from {
+    border-right-color: #e05281
+  }
+  to {
+    border-right-color: transparent
+  }
+}
+
+@keyframes animated-text__1 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 75px;
+  }
+}
+
+@keyframes animated-text__2 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100px;
+  }
+}
+
+@keyframes animated-text__3 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 530px;
+  }
+}
+
+@keyframes animated-text__4 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 530px;
+  }
+}
+
+@keyframes animated-text__5 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 530px;
+  }
+}
+@keyframes animated-text__6 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 250px;
+  }
+}
+
+@keyframes animated-text__7 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 270px;
+  }
+}
+
+.drink {
+  color: pink
+}

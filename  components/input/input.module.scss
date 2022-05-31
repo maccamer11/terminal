@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&display=swap");
+
+// Font Variables
+$rajdhani: "Rajdhani", serif;
+
+.input {
+  background-color: black;
+  font-family: $rajdhani;
+  margin-left: 8px;
+  width: 40vw;
+  outline: none;
+  caret-color: #68f056;
+  font-size: 17px;
+  font-weight:bold;
+  color: pink;
+  
+}
+
+.flex {
+  display: inline-block;
+}
