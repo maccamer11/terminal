@@ -57,7 +57,7 @@
   border-right: 2px solid rgba(17, 17, 17, 0.9);
 
  
-  animation: animated-text__8 1.2s steps(30, end) 1s 1 normal both,
+  animation: animated-text__8 1.1s steps(70, end) 1s 1 normal both,
     animated-cursor__8 750ms steps(30, end) 2;
   -webkit-animation-delay: 2.8s;
   animation-delay: 2.8s;
@@ -256,4 +256,17 @@
 
 .drink {
   color: pink
+}
+
+.url {
+  font-size: 14px;
+  color: pink;
+  text-decoration: underline;
+  cursor: pointer;
+
+}
+
+
+.title {
+  font-size: 16px;
 }

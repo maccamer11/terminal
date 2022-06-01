@@ -15,6 +15,8 @@ export const shell = async (
     clearHistory();
   } else if (command === "") {
     alert('Please enter a command')
+  } else if (command === "a") {
+    alert('rekt')
   } else if (Object.keys(bin).indexOf(args[0]) === -1) {
     setHistory(
       `${args[0]}: Command not found. Try 'help' to get started.`

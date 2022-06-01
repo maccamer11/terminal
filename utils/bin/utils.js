@@ -3,6 +3,7 @@ import packageJson from "../../package.json";
 import axios from "axios";
 import React from "react";
 import styles from './utils.module.css';
+import Link from 'next/link';
 
 const btc = 'https://data.messari.io/api/v1/assets?fields=id,slug,symbol,metrics/market_data/price_usd'
 const eth = "https://data.messari.io/api/v1/assets?fields=id,slug,symbol,metrics/market_data/price_usd"
@@ -78,7 +79,23 @@ export const ethereumPrice = async () => {
   return `One Ether is currently worth $${priceUSD} USD`;
 };
 
+export const news = async () => {
+  const res = await axios.get('https://data.messari.io/api/v1/news')
 
+  const news = res.data.data
+  
+  return (
+    <>
+    <div>
+    {news.map((news) => (
+      <p className={styles.title}>{news.title} — <a target='_blank' href={news.url}><span className={styles.url}>{news.url}</span></a></p>
+     
+    ))}
+    </div>
+    
+    </>
+  )
+}
 
 export const email = async (args) => {
   window.open("mailto:maccameron47@gmail.com");
