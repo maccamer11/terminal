@@ -9,12 +9,13 @@ import { Input } from "../ components/input";
 import { useHistory } from "../hooks/history";
 import { banner } from "../utils/bin";
 import styles from "../styles/Home.module.scss";
-import { Box } from "@chakra-ui/react";
+import { Box, Button } from "@chakra-ui/react";
 import Banner from "../ components/banner/Banner";
 
 const IndexPage = ({  inputRef }) => {
   const { trackPageView } = useMatomo();
 
+  const testRef = useRef(null)
   const containerRef = useRef(null);
   const {
     history,
@@ -26,15 +27,11 @@ const IndexPage = ({  inputRef }) => {
     setLastCommandIndex,
   } = useHistory([]);
 
-  /* const init = React.useCallback(() => setHistory(banner()), []); */
-
   useEffect(() => {
     trackPageView({});
   }, []);
 
- /*  React.useEffect(() => {
-    init();
-  }, [init]); */
+
 
 
 
@@ -44,7 +41,13 @@ const IndexPage = ({  inputRef }) => {
     }
   }, [history]);
 
-  
+  useEffect(() => {
+    if (testRef.current) {
+      testRef.current.scrollIntoView({behavior: "smooth"});
+    }
+  }, [history]);
+
+
 
 
   return (
@@ -71,8 +74,10 @@ const IndexPage = ({  inputRef }) => {
               clearHistory={clearHistory}
               
             />
+            
           </div>
         </div>
+        <footer ref={testRef}></footer>
       </Box>
     </>
   );

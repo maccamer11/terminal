@@ -4,10 +4,9 @@ import Head from "next/head";
 import { MatomoProvider, createInstance } from "@datapunt/matomo-tracker-react";
 import { ChakraProvider } from "@chakra-ui/react";
 import {useEffect, useRef} from 'react';
-import useKeypress from "../hooks/scroll";
 
 const App = ({ Component, pageProps }) => {
-  const inputRef = React.useRef(null);
+  const inputRef = useRef(null);
   const instance = createInstance({
     urlBase: "https://mackenziecameron.com",
     trackerUrl: "https://mackenziecameron.com",
@@ -27,11 +26,6 @@ const App = ({ Component, pageProps }) => {
       inputRef.current.focus();
     }
   }, []);
-
-
-
-
-
  
 
   return (
@@ -42,14 +36,17 @@ const App = ({ Component, pageProps }) => {
           content="initial-scale=1.0, width=device-width"
           key="viewport"
         />
+        <link rel="shortcut icon" href="/images/favicon.ico" />
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png" />
+          <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png"/>
+          <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png"/>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&display=swap" />
       </Head>
       <ChakraProvider>
         <MatomoProvider value={instance}>
           <div onClick={onClickAnywhere}>
-            {/*  <main > */}
             <Component {...pageProps} inputRef={inputRef} />
-            {/* </main> */}
+          
           </div>
          
         </MatomoProvider>

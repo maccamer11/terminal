@@ -1,4 +1,4 @@
-.age, .eyes, .bio1 {
+.age, .eyes, .bio1, .vices {
     
     width: 60px;
 /*     animation: typing 0.5s steps(20), blink .5s step-end infinite alternate; */
@@ -31,7 +31,7 @@
   
 
 
-.ageAns, .eyeAns, .bioAns1{
+.ageAns, .eyeAns, .bioAns1, .viceAns{
   font-weight: bold;
 }
 
@@ -53,14 +53,24 @@
   animation-delay: 1.4s;
 }
 
+.vices {
+  border-right: 2px solid rgba(17, 17, 17, 0.9);
+
+ 
+  animation: animated-text__8 1.2s steps(30, end) 1s 1 normal both,
+    animated-cursor__8 750ms steps(30, end) 2;
+  -webkit-animation-delay: 2.8s;
+  animation-delay: 2.8s;
+}
+
 .bio1 {
   border-right: 2px solid rgba(17, 17, 17, 0.9);
 
  
   animation: animated-text__3 1.6s steps(80, end) 1s 1 normal both,
     animated-cursor__3 750ms steps(30, end) ;
-  -webkit-animation-delay: 2.8s;
-  animation-delay: 2.8s;
+  -webkit-animation-delay: 4.8s;
+  animation-delay: 4.8s;
 }
 
 .bio2 {
@@ -69,8 +79,8 @@
   
   animation: animated-text__4 1.6s steps(80, end) 1s 1 normal both,
     animated-cursor__4 750ms steps(30, end) ;
-  -webkit-animation-delay: 4.4s;
-  animation-delay: 4.4s;
+  -webkit-animation-delay: 6.5s;
+  animation-delay: 6.5s;
 }
 
 .bio3 {
@@ -79,8 +89,8 @@
  
   animation: animated-text__5 1.6s steps(80, end) 1s 1 normal both,
     animated-cursor__5 750ms steps(30, end) ;
-  -webkit-animation-delay: 6.2s;
-  animation-delay: 6.2s;
+  -webkit-animation-delay: 8.2s;
+  animation-delay: 8.2s;
 }
 
 .bio4 {
@@ -88,8 +98,8 @@
 
   animation: animated-text__6 1.2s steps(80, end) 1s 1 normal both,
     animated-cursor__6 750ms steps(30, end) ;
-  -webkit-animation-delay: 7.9s;
-  animation-delay: 7.9s;
+  -webkit-animation-delay: 9.9s;
+  animation-delay: 9.9s;
 }
 .bioQuote {
   border-right: 2px solid rgba(17, 17, 17, 0.9);
@@ -97,8 +107,8 @@
 
   animation: animated-text__7 800ms steps(80, end) 1s 1 normal both,
     animated-cursor__7 750ms steps(30, end) infinite;
-  -webkit-animation-delay: 10.3s;
-  animation-delay: 10.3s;
+  -webkit-animation-delay: 11.7s;
+  animation-delay: 11.7s;
 }
 
 @keyframes animated-cursor__1 {
@@ -156,6 +166,15 @@
 }
 
 @keyframes animated-cursor__7 {
+  from {
+    border-right-color: #e05281
+  }
+  to {
+    border-right-color: transparent
+  }
+}
+
+@keyframes animated-cursor__8 {
   from {
     border-right-color: #e05281
   }
@@ -223,6 +242,15 @@
   }
   to {
     width: 270px;
+  }
+}
+
+@keyframes animated-text__8 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 425px;
   }
 }
 

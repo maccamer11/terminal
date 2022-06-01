@@ -4,12 +4,6 @@ import bann from '../../public/assets/bann.png'
 import styles from './banner.module.scss';
 
 const Banner = () => {
-   /*  window.onload = displayClock();
-    function displayClock(){
-      var display = new Date().toLocaleTimeString();
-      document.body.innerHTML = display;
-      setTimeout(displayClock, 1000); 
-    } */
 
     return (
         <>

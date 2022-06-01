@@ -3,7 +3,9 @@ import packageJson from "../../package.json";
 import axios from "axios";
 import React from "react";
 import styles from './utils.module.css';
-import {Text} from '@chakra-ui/react';
+
+const btc = 'https://data.messari.io/api/v1/assets?fields=id,slug,symbol,metrics/market_data/price_usd'
+const eth = "https://data.messari.io/api/v1/assets?fields=id,slug,symbol,metrics/market_data/price_usd"
 
 export const help = async (args) => {
   const commands = Object.keys(bin).sort().join("\n");
@@ -14,8 +16,9 @@ export const help = async (args) => {
 export const about = async (args) => {
   return (
     <>
-    <p className={styles.age}>Age: <span className={styles.ageAns}>28</span></p>
+    <p className={styles.age}>Age: <span className={styles.ageAns}>29</span></p>
     <p className={styles.eyes}>Eyes: <span className={styles.eyeAns}>Brown</span></p>
+    <p className={styles.vices}>Vices: <span className={styles.viceAns}>Swiss chocolate, NFT shopping, too much leverage</span></p>
     <p className={styles.bio1}>Bio: <span className={styles.bioAns1}>I am a product manager, front end programmer, and crypto aficiondao</span></p>
   <p className={styles.bio2}>who has been shipping products in the space for the past few years. Above</p>
   <p className={styles.bio3}>all, I am interested in the technologies that are set to change our economic</p>
@@ -32,14 +35,9 @@ export const date = async (args) => {
   return new Date().toString();
 };
 
-export const clear = async (args) => {
-  return new Date().toString();
-};
-
  export const bartender = async (args) => {
    const res = await axios.get('https://www.thecocktaildb.com/api/json/v1/1/random.php')
    const drink = res.data.drinks[0]
-   console.log(drink)
 return (
   <>
   <p>One <span className={styles.drink}>{drink.strDrink}</span> coming right up!</p>
@@ -55,32 +53,25 @@ return (
 )
 } 
 
-/* export const easterEgg = async (args) => {
-  return (
-    <>
-    <p>What is the answer?</p>
-    </>
-  )
-} */
-
 export const cv = async (args) => {
-  window.open('https://mackenziecameron.com/Resume.pdf', '_blank');
+  window.open('https://mackenziecameron.com/assets/pdfs/Resume_(3).pdf', '_blank');
 
   return 'Opening cv/resume ...'
 }
 
-export const bitcoinPrice = async () => {
+ export const bitcoinPrice = async () => {
   const price = await axios.get(
-    "https://data.messari.io/api/v1/assets?fields=id,slug,symbol,metrics/market_data/price_usd"
+    btc
   );
   const priceUSD = price.data.data[0].metrics.market_data.price_usd.toFixed(2);
 
   return (`One Bitcoin is currently worth $${priceUSD} USD`);
-};
+}; 
+
 
 export const ethereumPrice = async () => {
   const price = await axios.get(
-    "https://data.messari.io/api/v1/assets?fields=id,slug,symbol,metrics/market_data/price_usd"
+    eth
   );
   const priceUSD = price.data.data[1].metrics.market_data.price_usd.toFixed(2);
 
