@@ -41,18 +41,10 @@ const Input = ({
       event.preventDefault();
 
       setLastCommandIndex(0);
-      /* inputRef.current.scrollIntoView({ behavior: 'smooth' }) */
-     
-      
-      
-      console.log(lastCommandIndex)
 
       await shell(history, command, setHistory, clearHistory, setCommand);
 
       trackEvent({ category: "Command Executed", action: command });
-    
-      
-      /* containerRef.current.scrollTo(0, containerRef.current.scrollHeight); */
     }
 
     if (event.key === "ArrowUp") {
@@ -101,11 +93,6 @@ const Input = ({
         ref={inputRef}
         id="prompt"
         type="text"
-        /* className={`bg-light-background dark:bg-dark-background focus:outline-none flex-grow ${
-          commandExists(command) || command === ""
-            ? "text-dark-green"
-            : "text-dark-red"
-        }`} */
         className={styles.input}
         value={command}
         onChange={onChange}

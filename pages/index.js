@@ -48,8 +48,6 @@ const IndexPage = ({  inputRef }) => {
   }, [history]);
 
 
-
-
   return (
     <>
       <Head>

@@ -70,7 +70,7 @@ export const cv = async (args) => {
 }; 
 
 
-export const ethereumPrice = async () => {
+export const ethPrice = async () => {
   const price = await axios.get(
     eth
   );
@@ -85,16 +85,46 @@ export const news = async () => {
   const news = res.data.data
   
   return (
+   
     <>
-    <div>
+    <p>Getting latest news...</p>
     {news.map((news) => (
       <p className={styles.title}>{news.title} — <a target='_blank' href={news.url}><span className={styles.url}>{news.url}</span></a></p>
      
     ))}
-    </div>
-    
     </>
   )
+}
+
+export const markets = async () => {
+  const res = await axios.get('https://api.coingecko.com/api/v3/global');
+
+  const stats = res.data.data
+  console.log(stats)
+
+  return (<>
+  
+    <p>Getting market data over the last 24 hours...</p>
+    <p>Percentage change: <span className={styles.stats}>{stats.market_cap_change_percentage_24h_usd.toFixed(2)}%</span></p>
+    <p>Bitcoin dominance: <span className={styles.stats}>{stats.market_cap_percentage.btc.toFixed(2)}%</span></p>
+    { <p>Ethereum dominance: <span className={styles.stats}>{stats.market_cap_percentage.eth.toFixed(2)}%</span></p> }
+    { <p>Total crypto marketcap: <span className={styles.stats}>${stats.total_market_cap.usd.toLocaleString('en')}</span></p> }
+    </>
+  )
+}
+
+export const trendingCoins = async () => {
+  const res = await axios.get('https://api.coingecko.com/api/v3/search/trending')
+
+  const trends = res.data.coins
+   return (
+    <>
+    <p>Getting hottest coins this week...</p>
+  {trends.map((trend) => (
+    <p>{trend.item.name} — <span className={styles.symbols}>{trend.item.symbol}</span></p>
+  ))}
+    </>
+  ) 
 }
 
 export const email = async (args) => {
