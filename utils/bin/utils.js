@@ -3,7 +3,7 @@ import packageJson from "../../package.json";
 import axios from "axios";
 import React from "react";
 import styles from './utils.module.css';
-
+import {Text} from '@chakra-ui/react';
 
 export const help = async (args) => {
   const commands = Object.keys(bin).sort().join("\n");
@@ -64,7 +64,9 @@ return (
 } */
 
 export const cv = async (args) => {
-  window.open('https://blush-aurelia-12.tiiny.site/', '_blank');
+  window.open('https://mackenziecameron.com/Resume.pdf', '_blank');
+
+  return 'Opening cv/resume ...'
 }
 
 export const bitcoinPrice = async () => {
