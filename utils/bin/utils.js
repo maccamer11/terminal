@@ -8,7 +8,7 @@ import Link from 'next/link';
 const btc = 'https://data.messari.io/api/v1/assets?fields=id,slug,symbol,metrics/market_data/price_usd'
 const eth = "https://data.messari.io/api/v1/assets?fields=id,slug,symbol,metrics/market_data/price_usd"
 
-export const help = async (args) => {
+export const start = async (args) => {
   const commands = Object.keys(bin).sort().join("\n");
 
   return `Available commands:\n${commands}\n\n[ctrl+c] clear terminal.`;
@@ -35,6 +35,26 @@ export const about = async (args) => {
 export const date = async (args) => {
   return new Date().toString();
 };
+
+export const help = async () => {
+  return (
+    <>
+    <p>All commands:</p>
+    <ul>about — <span className={styles.desc}>About me in a nutshell</span></ul>
+    <ul>bartender — <span className={styles.desc}>What can I get ya, mate?</span></ul>
+    <ul>bitcoinPrice — <span className={styles.desc}>The current price of one Bitcoin in USD. Have we hit 100k yet??</span></ul>
+    <ul>cv — <span className={styles.desc}>View my resume/cv and hit me up with only your finest offers</span></ul>
+    <ul>date — <span className={styles.desc}>Get the current date</span></ul>
+    <ul>email — <span className={styles.desc}>My contact details. Bring it on, I LOVE spam</span></ul>
+    <ul>ethPrice — <span className={styles.desc}>The current price of one Ether in USD</span></ul>
+    <ul>help — <span className={styles.desc}>A more detailed description of the commands</span></ul>
+    <ul>markets — <span className={styles.desc}>The current state of the global crypto market. HODLLLL</span></ul>
+    <ul>news — <span className={styles.desc}>What's going on in the cryptosphere. Has bitcoin died again for the 87th time?</span></ul>
+    <ul>start — <span className={styles.desc}>A list of all commands</span></ul>
+    <ul>trendingCoins — <span className={styles.desc}>The hottest coins in the last 7 days</span></ul>
+    </>
+  )
+}
 
  export const bartender = async (args) => {
    const res = await axios.get('https://www.thecocktaildb.com/api/json/v1/1/random.php')
@@ -100,7 +120,6 @@ export const markets = async () => {
   const res = await axios.get('https://api.coingecko.com/api/v3/global');
 
   const stats = res.data.data
-  console.log(stats)
 
   return (<>
   
@@ -128,8 +147,25 @@ export const trendingCoins = async () => {
 }
 
 export const email = async (args) => {
-  window.open("mailto:maccameron47@gmail.com");
+  window.open("mailto:mackenziecameron2193@gmail.com");
 
-  return "Opening mailto:maccameron47@gmail.com...";
+  return "Opening mailto:mackenziecameron2193@gmail...";
 };
+
+/* export const easterEgg = async () => {
+  return (
+    <>
+    <p>What is the answer?</p>
+    <input ref={inputRef}
+        id="prompt"
+        type="text"
+        className={styles.input}
+        value={command}
+        onChange={onChange}
+        autoFocus
+        onKeyDown={onSubmit}
+        autoComplete="off"/>
+    </>
+  )
+} */
 

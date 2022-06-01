@@ -9,7 +9,7 @@ const Banner = () => {
         <>
         <div className={styles.banner}>
         <Image src={bann}/>
-        <Text className={styles.bannerText}>Type ' help ' to view a list of available commands</Text>
+        <Text className={styles.bannerText}>Type ' start ' to view a list of available commands</Text>
         <Text></Text>
         </div>
        
