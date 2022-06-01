@@ -19,7 +19,7 @@ export const shell = async (
     alert('rekt')
   } else if (Object.keys(bin).indexOf(args[0]) === -1) {
     setHistory(
-      `${args[0]}: Command not found. Try 'help' to get started.`
+      `${args[0]}: Command not found. Try 'start' to get started.`
     );
   } else {
     const output = await bin[args[0]](args.slice(1));

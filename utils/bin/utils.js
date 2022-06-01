@@ -20,7 +20,7 @@ export const about = async (args) => {
     <p className={styles.age}>Age: <span className={styles.ageAns}>29</span></p>
     <p className={styles.eyes}>Eyes: <span className={styles.eyeAns}>Brown</span></p>
     <p className={styles.vices}>Vices: <span className={styles.viceAns}>Swiss chocolate, NFT shopping, too much leverage</span></p>
-    <p className={styles.bio1}>Bio: <span className={styles.bioAns1}>I am a product manager, front end programmer, and crypto aficiondao</span></p>
+    <p className={styles.bio1}>Bio: <span className={styles.bioAns1}>I am a product manager, front end programmer, and crypto native</span></p>
   <p className={styles.bio2}>who has been shipping products in the space for the past few years. Above</p>
   <p className={styles.bio3}>all, I am interested in the technologies that are set to change our economic</p>
   <p className={styles.bio4}>and political landscapes forever.</p>
