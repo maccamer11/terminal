@@ -24,6 +24,7 @@ const Input = ({
     const commands = history
       .map(({ command }) => command)
       .filter((command) => command);
+      
 
     if (event.key === "c" && event.ctrlKey) {
       event.preventDefault();
@@ -82,7 +83,7 @@ const Input = ({
   };
 
   const onChange = ({ target: { value } }) => {
-    setCommand(value);
+    setCommand(value.toLowerCase());
   };
 
   return (

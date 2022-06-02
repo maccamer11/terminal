@@ -39,7 +39,9 @@ export const date = async (args) => {
 export const help = async () => {
   return (
     <>
+    <div>
     <p>All commands:</p>
+    <div>
     <ul>about — <span className={styles.desc}>About me in a nutshell</span></ul>
     <ul>bartender — <span className={styles.desc}>What can I get ya, mate?</span></ul>
     <ul>bitcoinPrice — <span className={styles.desc}>The current price of one Bitcoin in USD. Have we hit 100k yet??</span></ul>
@@ -52,6 +54,8 @@ export const help = async () => {
     <ul>news — <span className={styles.desc}>What's going on in the cryptosphere. Has bitcoin died again for the 87th time?</span></ul>
     <ul>start — <span className={styles.desc}>A list of all commands</span></ul>
     <ul>trendingCoins — <span className={styles.desc}>The hottest coins in the last 7 days</span></ul>
+    </div>
+    </div>
     </>
   )
 }
@@ -109,7 +113,7 @@ export const news = async () => {
     <>
     <p>Getting latest news...</p>
     {news.map((news) => (
-      <p className={styles.title}>{news.title} — <a target='_blank' href={news.url}><span className={styles.url}>{news.url}</span></a></p>
+      <p key={news.title} className={styles.title}>{news.title} — <a target='_blank' href={news.url}><span className={styles.url}>{news.url}</span></a></p>
      
     ))}
     </>

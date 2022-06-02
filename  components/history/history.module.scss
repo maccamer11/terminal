@@ -8,7 +8,12 @@ $rajdhani: "Rajdhani", serif;
   font-family: $rajdhani;
   font-size: 17px;
   font-weight: bold;
- 
+}
+
+@media  (max-width: 650px) {
+  .flexGrow {
+    font-size: 15px;
+  }
 }
 
 .test {
@@ -16,5 +21,17 @@ $rajdhani: "Rajdhani", serif;
   font-size: 17px;
   font-weight: bold;
   white-space: pre;
-  
+}
+
+@media  (max-width: 650px) {
+  .test {
+    font-size: 15px;
+    white-space:normal;
+  }
+}
+
+@media  (max-width: 750px) {
+  .test {
+    white-space:normal;
+  }
 }

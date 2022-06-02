@@ -14,11 +14,12 @@ $rajdhani: "Rajdhani", serif;
   font-weight:bold;
   color: pink;
   
+}
 
-  @media screen and (min-width:900px) {
-    width: 500px;
+@media  (max-width: 650px) {
+  .input {
+    width: 160px;
   }
-  
 }
 
 .flex {

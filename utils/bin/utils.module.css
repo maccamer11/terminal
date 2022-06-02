@@ -24,11 +24,15 @@
       white-space: nowrap;
       overflow: hidden;
       border-right: 1px solid;
-      font-weight: bold;
-      
+      font-weight: bold; 
      
 }
   
+@media  (max-width: 650px) {
+  .bio1, .bio2, .bio3, .bio4, .age, .eyes, .bioAns1, .viceAns, .eyeAns, .ageAns, .vices, .bioQuote{
+   font-size: 13px;
+  }
+}
 
 
 .ageAns, .eyeAns, .bioAns1, .viceAns{
