@@ -84,7 +84,7 @@ export const cv = async (args) => {
   return 'Opening cv/resume ...'
 }
 
- export const bitcoinPrice = async () => {
+ export const bitcoin_price = async () => {
   const price = await axios.get(
     btc
   );
@@ -94,7 +94,7 @@ export const cv = async (args) => {
 }; 
 
 
-export const ethPrice = async () => {
+export const eth_price = async () => {
   const price = await axios.get(
     eth
   );
@@ -136,7 +136,7 @@ export const markets = async () => {
   )
 }
 
-export const trendingCoins = async () => {
+export const trending_coins = async () => {
   const res = await axios.get('https://api.coingecko.com/api/v3/search/trending')
 
   const trends = res.data.coins

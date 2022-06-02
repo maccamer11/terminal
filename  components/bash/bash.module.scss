@@ -27,12 +27,9 @@ $rajdhani: "Rajdhani", serif;
     font-size: 16px;
   }
 }
+@media  (max-width: 450px) {
+  .bash {
+    font-size: 15px;
+  }
+}
 
-
-/* "background": "black",
-"foreground": "#E05281",
-"yellow": "#68F056",
-"green": "#8AF47C",
-"gray": "pink",
-"blue": "red",
-"red": "pink" */

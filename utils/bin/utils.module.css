@@ -34,6 +34,11 @@
   }
 }
 
+@media  (max-width: 450px) {
+  .bio1, .bio2, .bio3, .bio4, .age, .eyes, .bioAns1, .viceAns, .eyeAns, .ageAns, .vices, .bioQuote{
+   font-size: 12px;
+  }
+}
 
 .ageAns, .eyeAns, .bioAns1, .viceAns{
   font-weight: bold;
