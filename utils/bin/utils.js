@@ -44,16 +44,16 @@ export const help = async () => {
     <div>
     <ul>about — <span className={styles.desc}>About me in a nutshell</span></ul>
     <ul>bartender — <span className={styles.desc}>What can I get ya, mate?</span></ul>
-    <ul>bitcoinPrice — <span className={styles.desc}>The current price of one Bitcoin in USD. Have we hit 100k yet??</span></ul>
+    <ul>bitcoin_price — <span className={styles.desc}>The current price of one Bitcoin in USD. Have we hit 100k yet??</span></ul>
     <ul>cv — <span className={styles.desc}>View my resume/cv and hit me up with only your finest offers</span></ul>
     <ul>date — <span className={styles.desc}>Get the current date</span></ul>
     <ul>email — <span className={styles.desc}>My contact details. Bring it on, I LOVE spam</span></ul>
-    <ul>ethPrice — <span className={styles.desc}>The current price of one Ether in USD</span></ul>
+    <ul>eth_price — <span className={styles.desc}>The current price of one Ether in USD</span></ul>
     <ul>help — <span className={styles.desc}>A more detailed description of the commands</span></ul>
     <ul>markets — <span className={styles.desc}>The current state of the global crypto market. HODLLLL</span></ul>
     <ul>news — <span className={styles.desc}>What's going on in the cryptosphere. Has bitcoin died again for the 87th time?</span></ul>
     <ul>start — <span className={styles.desc}>A list of all commands</span></ul>
-    <ul>trendingCoins — <span className={styles.desc}>The hottest coins in the last 7 days</span></ul>
+    <ul>trending_coins — <span className={styles.desc}>The hottest coins in the last 7 days</span></ul>
     </div>
     </div>
     </>
