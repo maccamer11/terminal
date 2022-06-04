@@ -52,7 +52,7 @@ const IndexPage = ({  inputRef }) => {
     <>
       <Head>
         <title>Maccamer | Terminal</title>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&display=swap" />
+        
       </Head>
       <Box py="14" px="6" overflowY='scroll' className={styles.background}>
         <div className={styles.banner}>
