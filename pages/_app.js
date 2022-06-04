@@ -30,12 +30,21 @@ const App = ({ Component, pageProps }) => {
 
   return (
     <>
+  
       <Head>
         <meta
           name="viewport"
           content="initial-scale=1.0, width=device-width"
           key="viewport"
         />
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CVDCV2BMBN"></script>
+<script>
+  {`window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CVDCV2BMBN');`}
+</script>
         <link rel="shortcut icon" href="/images/favicon.ico" />
           <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png" />
           <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png"/>

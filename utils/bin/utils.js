@@ -54,6 +54,7 @@ export const help = async () => {
     <ul>news — <span className={styles.desc}>What's going on in the cryptosphere. Has bitcoin died again for the 87th time?</span></ul>
     <ul>start — <span className={styles.desc}>A list of all commands</span></ul>
     <ul>trending_coins — <span className={styles.desc}>The hottest coins in the last 7 days</span></ul>
+    <ul>website — <span className={styles.desc}>How I built this website</span></ul>
     </div>
     </div>
     </>
@@ -148,6 +149,12 @@ export const trending_coins = async () => {
   ))}
     </>
   ) 
+}
+
+export const website = async(args) => {
+  window.open('https://github.com/maccamer11/terminal')
+
+  return "Accessing github website repo..."
 }
 
 export const email = async (args) => {
