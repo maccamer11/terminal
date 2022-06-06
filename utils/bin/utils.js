@@ -1,9 +1,7 @@
 import * as bin from "./index";
-import packageJson from "../../package.json";
 import axios from "axios";
 import React from "react";
 import styles from './utils.module.css';
-import Link from 'next/link';
 
 const btc = 'https://data.messari.io/api/v1/assets?fields=id,slug,symbol,metrics/market_data/price_usd'
 const eth = "https://data.messari.io/api/v1/assets?fields=id,slug,symbol,metrics/market_data/price_usd"
@@ -36,6 +34,16 @@ export const date = async (args) => {
   return new Date().toString();
 };
 
+export const wallet = async () => {
+  window.open('https://entrophy11.vercel.app/')
+  /* return (
+    <>
+    <p className={styles.projects}>Solana browser wallet — <a target='_blank' href='https://entrophy11.vercel.app/'><span className={styles.projDesc}>An in browser Solana wallet with other protocols in development</span></a></p>
+    </>
+  ) */
+  return `Opening crypto wallet...`
+}
+
 export const help = async () => {
   return (
     <>
@@ -52,6 +60,7 @@ export const help = async () => {
     <ul>help — <span className={styles.desc}>A more detailed description of the commands</span></ul>
     <ul>markets — <span className={styles.desc}>The current state of the global crypto market. HODLLLL</span></ul>
     <ul>news — <span className={styles.desc}>What's going on in the cryptosphere. Has bitcoin died again for the 87th time?</span></ul>
+    <ul>wallet — <span className={styles.desc}>A web3 wallet for Solana, with other protocols on the way</span></ul>
     <ul>start — <span className={styles.desc}>A list of all commands</span></ul>
     <ul>trending_coins — <span className={styles.desc}>The hottest coins in the last 7 days</span></ul>
     <ul>website — <span className={styles.desc}>How I built this website</span></ul>
