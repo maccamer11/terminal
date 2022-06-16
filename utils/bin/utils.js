@@ -89,7 +89,7 @@ return (
 } 
 
 export const cv = async (args) => {
-  window.open('https://mackenziecameron.com/assets/pdfs/Resume2022.pdf', '_blank');
+  window.open('https://mackenziecameron.com/assets/pdfs/Resume_2022_3.pdf', '_blank');
 
   return 'Opening cv/resume ...'
 }
